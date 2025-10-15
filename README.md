@@ -15,11 +15,11 @@
 ## 🖼️ Screenshots
 | Feature | Screenshot |
 |----------|-------------|
-| Home feed | ![Feed](screenshots/Main page Screenshot.png) |
-| Like button working | ![Like](screenshots/Like button.png) |
-| Comment added | ![Comment](screenshots/Comment added.png) |
-| Creating a new post | ![Composer](screenshot/Creating Post.png) |
-| Profile page | ![Profile](screenshots/Profile.png) |
+| Home feed | ![Feed](Screenshots/Mainpage.png) |
+| Like button working | ![Like](Screenshots/Likebutton.png) |
+| Comment added | ![Comment](Screenshots/Comment.png) |
+| Creating a new post | ![Composer](Screenshot/Creatingpost.png) |
+| Profile page | ![Profile](Screenshots/Profile.png) |
 ---
 
 ## 💡 About This Project
