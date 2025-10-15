@@ -20,8 +20,12 @@
 | Comment added | ![Comment](Screenshots/Comment.png) |
 | Creating a new post | ![Composer](Screenshot/Creatingpost.png) |
 | Profile page | ![Profile](Screenshots/Profile.png) |
----
+|**Screenshot A** | App showing centered layout and DevTools Styles panel with system-ui font-family and `.main` container ||margin | ![Screenshot A](Screenshots/screenshotA.png) |
+| **Screenshot B** | Hovered Like button showing hover style difference | ![Screenshot B](Screenshots/screenshotB.png) |
+| **Screenshot C** | DevTools Elements view showing:<br>• a Like `<button>` with `aria-pressed="true"` (after clicking)<br>• a post image `<img>` with a meaningful `alt` attribute | ![Screenshot C](Screenshots/screenshotC.png) |
 
+---
+Image URL: https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600
 ## 💡 About This Project
 This is a small Instagram-style web app I built for my Web Development Lab assignment.  
 I used **React** with **Vite** to make it fast and responsive.  

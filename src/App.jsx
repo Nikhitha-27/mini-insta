@@ -10,19 +10,29 @@ import "./index.css";
 const STORAGE_KEY = "mini-insta-posts";
 
 export default function App() {
+  // Read once on mount
   const [posts, setPosts] = useState(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? JSON.parse(saved) : seedPosts;
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      return saved ? JSON.parse(saved) : seedPosts;
+    } catch {
+      return seedPosts;
+    }
   });
 
+  // Save whenever posts change
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(posts));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(posts));
+    } catch {
+      /* ignore */
+    }
   }, [posts]);
 
   return (
-    <div style={styles.page}>
+    <div className="app">
       <Navbar />
-      <main style={styles.main}>
+      <main className="main">
         <Routes>
           <Route
             path="/"
@@ -39,12 +49,3 @@ export default function App() {
     </div>
   );
 }
-
-const styles = {
-  page: {
-    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
-    background: "#fafafa",
-    minHeight: "100vh",
-  },
-  main: { maxWidth: 680, margin: "24px auto", padding: "0 16px" },
-};

@@ -19,6 +19,7 @@ export default function PostCard({ post, setPosts }) {
 
   return (
     <article className="card">
+      {/* --- Header with author --- */}
       <div className="card-header">
         <img className="avatar" src={post.avatar} alt={`${post.author} avatar`} />
         <strong className="author">
@@ -26,6 +27,7 @@ export default function PostCard({ post, setPosts }) {
         </strong>
       </div>
 
+      {/* --- Post image --- */}
       <img
         className="card-img"
         src={post.imageUrl}
@@ -33,6 +35,7 @@ export default function PostCard({ post, setPosts }) {
         loading="lazy"
       />
 
+      {/* --- Actions: Like button and count --- */}
       <div className="actions">
         <button
           type="button"
@@ -45,10 +48,12 @@ export default function PostCard({ post, setPosts }) {
         <span className="like-count">{post.likeCount} likes</span>
       </div>
 
+      {/* --- Caption --- */}
       <p className="caption">
         <strong>@{post.author ?? "unknown"}</strong> {post.caption}
       </p>
 
+      {/* --- Comments --- */}
       <CommentList comments={post.comments ?? []} />
       <CommentForm postId={post.id} setPosts={setPosts} />
     </article>
